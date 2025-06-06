@@ -4,8 +4,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../injection_container.dart';
 
-class OnboardingPage extends StatelessWidget {
-  const OnboardingPage({super.key});
+class LandingPage extends StatelessWidget {
+  const LandingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +13,8 @@ class OnboardingPage extends StatelessWidget {
     final isOnboardingCompleted =
         prefs.getBool(AppConstants.onboardingKey) ?? false;
     final startText = isOnboardingCompleted
-        ? 'Welcome back to Ankaek Flutter Hub'
-        : 'Welcome to Ankaek Flutter Hub';
+        ? 'Welcome back to AnkaEk Flutter'
+        : 'Welcome to AnkaEk Flutter';
     final getStartText =
         isOnboardingCompleted ? 'Continue exploring' : 'Get started';
     return Scaffold(
