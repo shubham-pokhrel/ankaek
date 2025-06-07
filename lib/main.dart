@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'core/router/app_router.dart';
+import 'features/posts/data/models/post_model.dart';
 import 'injection_container.dart' as di;
 
 void main() async {
@@ -7,6 +9,7 @@ void main() async {
   
   // Initialize Hive
   await Hive.initFlutter();
+  Hive.registerAdapter(PostModelAdapter());
   
   // Initialize dependencies
   await di.init();
